@@ -2,9 +2,15 @@
 
 A Gem made to build regression tests to test the output of FAUST DSP programs.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/faust_tester`. To experiment with that code, run `bin/console` for an interactive prompt.
+`FaustTester` is a regression test suite for the programs written in `faust`.
 
-TODO: Delete this and the text above, and describe your gem
+[`faust`](http://faust.grame.fr/) (Functional AUdio STream) is a domain-specific purely functional
+programming language written by Yann Orlarey, Dominique Fober and Stéphane Letz
+to implement signal processing algorithms in the form
+of libraries, audio plug-ins, or standalone applications. 
+
+As `faust` programs are notoriously difficult to debug, I wrote this little `ruby` `gem` 
+to use the power of `ruby`'s `rspec` testing suite.
 
 ## Installation
 
@@ -24,7 +30,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Configure appropriately the tester to known where the testing suite and the
+`faust` programs are. 
+
+Then simply run:
+
+```sh
+rake
+```
+
+from the command line in this directory, and this command will run the full
+testing suite.
 
 ## Development
 
